@@ -3,7 +3,7 @@ import axios from "axios";
 import Dropdown from "react-dropdown";
 import parse from "html-react-parser";
 
-import fetchShow from './api/fetchShow.js';
+import { fetchShow } from './api/fetchShow.js';
 import { formatSeasons } from "./utils/formatSeasons.js";
 import Episodes from "./components/Episodes";
 import "./styles.css";
@@ -17,7 +17,6 @@ export default function App() {
   useEffect(() => {
     fetchShow()
       .then(res => {
-        console.log(res.data)
         setShow(res.data);
         setSeasons(formatSeasons(res.data._embedded.episodes));
       })
