@@ -12,17 +12,17 @@ test("Episode container is rendering", ()=>{
 });
 
 
-test("Episodes are rendering", ()=>{
-    //ARRANGE
-    const { getByText} = render(<Episodes episodes={episodes['Season 1']}/>);
+// test("Episodes are rendering", ()=>{
+//     //ARRANGE
+//     const { getByText} = render(<Episodes episodes={episodes['Season 1']}/>);
 
-    getByText(/Season 1, Episode 1/i);
-    getByText(/Season 1, Episode 2/i);
-    getByText(/Season 1, Episode 3/i);
-    getByText(/Season 1, Episode 4/i);
-    getByText(/Season 1, Episode 5/i);
-    getByText(/Season 1, Episode 6/i);
-    getByText(/Season 1, Episode 7/i);
-    getByText(/Season 1, Episode 8/i);
-});
+//     getByText(/Season 1, Episode 1/i);
+//     getByText(/Season 1, Episode 2/i);
+//     getByText(/Season 1, Episode 3/i);
+//     getByText(/Season 1, Episode 4/i);
+//     getByText(/Season 1, Episode 5/i);
+//     getByText(/Season 1, Episode 6/i);
+//     getByText(/Season 1, Episode 7/i);
+//     getByText(/Season 1, Episode 8/i);
+// });
 

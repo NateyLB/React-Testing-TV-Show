@@ -1,10 +1,13 @@
 import React from 'react';
 import parse from 'html-react-parser';
+import { Link } from "react-router-dom";
+
 
 export default function Episodes(props) {
   return (
     <div data-testid="episodes" className="episodes">
       {props.episodes.map(e => (
+        <Link to={`${props.season}/episode/${e.number}`} style={{ textDecoration: 'none' }}>
         <div className="episode" key={e.id}>
           {e.image && (
             <img className="episode-image" src={e.image.medium} alt={e.name} />
@@ -19,6 +22,7 @@ export default function Episodes(props) {
             <p className="episode-runtime">{e.runtime} minutes</p>
           </div>
         </div>
+        </Link>
       ))}
     </div>
   );
